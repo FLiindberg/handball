@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 //import './style.css';
 import Table from '@mui/material/Table';
@@ -58,7 +58,7 @@ return(
               <TableCell align="right">{item.description}</TableCell>
               <TableCell align="right">{item.link}</TableCell>
                 <ButtonGroup variant="contained" align="right" aria-label="outlined primary button group">
-                    <Button onClick={()=>ViewPosts()}>Läs mer</Button>
+                    <Button onClick={()=>ViewPosts(item.postId)}>Läs mer</Button>
                     <Button onClick={()=>CreatePosts()}>Skapa inlägg</Button>
                 </ButtonGroup>
             </TableRow>
