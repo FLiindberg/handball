@@ -1,32 +1,27 @@
-import GetPosts from './Components/GetPosts';
-import ViewPosts from './Components/ViewPosts';
-import CreatePosts from './Components/CreatePosts';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import Create from './Components/Create';
+import PostDetails from './Components/PostDetails';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
   
   return (
     <Router>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <Link class="navbar-brand" to="/">Hem</Link>
-      <Link class="navbar-brand" to="/CreatePosts">Skapa inlägg</Link>
-      <div>
-        <ul class="navbar-nav">
-        </ul>
+      <div className="App">
+        <Navbar />
+        <div className="Content">
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/create' element={<Create />} />
+            <Route path='/posts/:id' element={<PostDetails />} />
+          </Routes>
+        </div>
       </div>
-      </nav>
-    <Routes>
-
-    <Route path='/' element={<GetPosts />} />
-    <Route path='/CreatePosts' element={<CreatePosts />} />
-    <Route path='/ViewPosts/:id' element={<ViewPosts />} />
-    
-    </Routes>
     </Router>
     
   )
