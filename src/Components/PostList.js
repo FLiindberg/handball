@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const PostList = ({ posts, title}) => {
+const PostList = ({ posts, title, author, team }) => {
 
     return (
         <div className="post-list">
@@ -9,7 +9,9 @@ const PostList = ({ posts, title}) => {
                 <div className="post-preview" key={post.postId}>
                     <Link to={`/posts/${post.postId}`}>
                         <h2>{ post.title}</h2>
-                        <p>Länk: { post.link }</p>
+                        <p>Länk till video: { post.link }</p>
+                        <p>Inlägget gjordes av: { post.author }</p>
+                        <p>Lag: { post.team }</p>
                     </Link>
                 </div>
             ))}

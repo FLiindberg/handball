@@ -14,6 +14,8 @@ const PostDetails = () => {
                     <h2>{ post.title }</h2>
                     <div>{ post.description }</div>
                     <p>Länk till video: { post.link }</p>
+                    <p>Inlägget gjordes av: { post.author }</p>
+                    <p>Lag: { post.team }</p>
                 </article>
             )}
         </div>
