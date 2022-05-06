@@ -12,7 +12,7 @@ import './index.css'
     
     const handleSubmit =(e) => {
         e.preventDefault();
-        const post = { title, description, link };
+        const post = { title, description, link, author, team };
         fetch('https://localhost:7018/api/Posts', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
@@ -47,14 +47,14 @@ import './index.css'
                     onChange={(e) => setLink(e.target.value)}
                 />
                 <label>Ditt namn</label>
-                <input 
+                <input
                     type="text"
                     required
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                 />
                 <label>Vilket lag du tillhör</label>
-                <input 
+                <input
                     type="text"
                     required
                     value={team}
@@ -64,6 +64,8 @@ import './index.css'
                 <p>{ title }</p>
                 <p>{ description }</p>
                 <p>{ link }</p>
+                <p>{ author }</p>
+                <p>{ team }</p>
             </form>
         </div>
     );
