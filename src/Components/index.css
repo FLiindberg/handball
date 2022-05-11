@@ -34,6 +34,11 @@
   padding: 20px;
 }
 
+.home {
+  padding: 10px 16px;
+  text-align: center;
+}
+
 .post-list {
   padding: 10px 16px;
   text-align: center;
@@ -67,7 +72,7 @@
   color: #3567f1;
   margin-bottom: 10px;
 }
-.post-details div {
+.post-details {
   text-align: center;
   margin: 20px 0;
 }
