@@ -53,7 +53,7 @@ import './index.css'
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                 />
-                <label>Vilket lag du tillhör</label>
+                <label>Vilket lag tillhör du</label>
                 <input
                     type="text"
                     required
